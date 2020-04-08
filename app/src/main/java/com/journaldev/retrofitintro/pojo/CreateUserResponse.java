@@ -2,9 +2,6 @@ package com.journaldev.retrofitintro.pojo;
 
 import com.google.gson.annotations.SerializedName;
 
-/**
- * Created by anupamchugh on 09/01/17.
- */
 
 public class CreateUserResponse {
 

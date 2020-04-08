@@ -5,10 +5,6 @@ import com.google.gson.annotations.SerializedName;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by anupamchugh on 09/01/17.
- */
-
 public class MultipleResource {
 
     @SerializedName("page")

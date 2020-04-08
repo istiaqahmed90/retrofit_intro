@@ -7,13 +7,11 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by anupamchugh on 05/01/17.
- */
 
 class APIClient {
 
     private static Retrofit retrofit = null;
+    static  String base_url = "https://reqres.in";
 
     static Retrofit getClient() {
 
@@ -23,7 +21,7 @@ class APIClient {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl("https://reqres.in")
+                .baseUrl(base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();
