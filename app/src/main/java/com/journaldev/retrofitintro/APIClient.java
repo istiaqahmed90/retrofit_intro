@@ -11,9 +11,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 class APIClient {
 
     private static Retrofit retrofit = null;
-    static  String base_url = "https://reqres.in";
 
-    static Retrofit getClient() {
+
+    static Retrofit getClient(String _base_url) {
 
         HttpLoggingInterceptor interceptor = new HttpLoggingInterceptor();
         interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
@@ -21,7 +21,7 @@ class APIClient {
 
 
         retrofit = new Retrofit.Builder()
-                .baseUrl(base_url)
+                .baseUrl(_base_url)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build();

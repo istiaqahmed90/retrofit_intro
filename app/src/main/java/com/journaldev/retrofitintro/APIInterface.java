@@ -1,6 +1,8 @@
 package com.journaldev.retrofitintro;
 
 import com.journaldev.retrofitintro.pojo.MultipleResource;
+//import com.journaldev.retrofitintro.pojo.RequiredVarification;
+import com.journaldev.retrofitintro.pojo.RequiredVarification;
 import com.journaldev.retrofitintro.pojo.User;
 import com.journaldev.retrofitintro.pojo.UserList;
 
@@ -17,11 +19,16 @@ interface APIInterface {
     @GET("/api/unknown")
     Call<MultipleResource> doGetListResources();
 
+    @GET("index.php")
+    Call<RequiredVarification> getListRequiredVarification();
+
     @POST("/api/users")
     Call<User> createUser(@Body User user);
 
     @GET("/api/users?")
     Call<UserList> doGetUserList(@Query("page") String page);
+
+
 
     @FormUrlEncoded
     @POST("/api/users?")
